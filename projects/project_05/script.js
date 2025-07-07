@@ -26,7 +26,7 @@ function handleInput(value) {
     }
     if (value === "=") {
         try {
-            // Evaluate safely
+            
             let evalResult = eval(currentInput.replace(/%/g, "/100*"));
             if (evalResult === undefined) evalResult = "";
             textfield.value = evalResult;
@@ -40,7 +40,7 @@ function handleInput(value) {
         return;
     }
     if (operators.includes(value)) {
-        if (currentInput === "" && value !== "-") return; // Only allow - at start
+        if (currentInput === "" && value !== "-") return; 
         if (operators.includes(currentInput.slice(-1))) {
             // Replace last operator
             currentInput = currentInput.slice(0, -1) + value;
@@ -52,12 +52,12 @@ function handleInput(value) {
         return;
     }
     if (value === ".") {
-        // Prevent multiple decimals in a number
+        
         let parts = currentInput.split(/\+|-|\*|\/|%/);
         let lastPart = parts[parts.length - 1];
         if (lastPart.includes(".")) return;
     }
-    // If result was just shown and next input is a number, start new input
+    
     if (resultShown && !isNaN(value)) {
         currentInput = value;
         textfield.value = currentInput;
