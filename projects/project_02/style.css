@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(96, 95, 95);
+    margin: 0%;
+}
+.home{
+    background-color: rgb(151, 148, 148);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin:0%;
+}
+#home_button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+main{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.block{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+h4{
+    margin: 5px;
+}
+
+#result{
+    margin-left: 180px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+.calculate{
+    margin-left: 180px;
+    margin-bottom: 30px;
+}
+
+#calculate_button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.guide{
+    font-weight: bold;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: rgb(41, 37, 37); color: rgb(198, 185, 185);">
+    <h2>Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/32506085/pexels-photo-32506085.jpeg"  alt="photoshop"></li>
+            <li><img width="200px" id="rome" src="https://images.pexels.com/photos/32751828/pexels-photo-32751828.jpeg"  alt=""></li>
+            <li><img width="200px" id="duck" src="https://images.pexels.com/photos/32703696/pexels-photo-32703696.jpeg"  alt=""></li>
+            <li><img width="200px" id="lady" src="https://images.pexels.com/photos/31900651/pexels-photo-31900651.jpeg"  alt=""></li>
+            <li><img width="200px" id="squirel" src="https://images.pexels.com/photos/31800280/pexels-photo-31800280.jpeg"  alt=""></li>
+            <li><a style="color: aliceblue;" id="google" href="https://www.google.com">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById("duck").onclick = function(){
+    //     alert("duck clicked")
+    // } its good but not used now because its give less features
+
+    // attachEvent()
+    // jQuery - on
+
+    document.getElementById("duck").addEventListener('click',function(e){
+        // console.log(e);
+    },false)
+
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement ,currentTarget
+    // clientX, clientY, screenX, screenY
+    // altKey, shiftKey, ctrlKey, keyCode
+
+    // document.getElementById("images").addEventListener('click',function(){
+    //     console.log("clicked inside the ul");
+    // },false)
+
+    // document.getElementById("duck").addEventListener('click',function(e){
+    //     console.log("duck clicked");
+    //     // e.stopPropagation() // it will stop event bubbling
+    // },false) // event bubbling It is default behavior
+
+    // document.getElementById("images").addEventListener('click',function(){
+    //     console.log("clicked inside the ul");
+    // },true)
+
+    // document.getElementById("duck").addEventListener('click',function(){
+    //     console.log("duck clicked");
+    // },true) // event capturing
+
+    document.getElementById("google").addEventListener('click',function(e){
+        console.log("google clicked");
+        e.preventDefault()
+    })
+
+    document.querySelector("#images").addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName === "IMG"){
+            console.log(e.target.parentNode);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+            // removeIt.parentNode.removeChild(removeIt)
+        }
+    },false)
+
+
+</script>
+</html>
