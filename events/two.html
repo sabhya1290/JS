@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Asynchronous </title>
+</head>
+<body>
+    <h1>Sabhya Singh</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const hello = function(){
+        console.log("Hello World");
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Hello World";
+        console.log("Text Changed");
+    }
+    const changeMe = setInterval(changeText,2000)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("Timeout Cleared");
+    })
+</script>
+</html>

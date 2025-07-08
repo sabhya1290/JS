@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Asynchronous | 2 </title>
+</head>
+<body>
+    <h1>Sabhya Singh</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayDate = function(str){
+        console.log(str,Date.now());
+        
+    }
+    let intervalId = null
+
+    document.querySelectorAll('button').forEach(function(button){
+        button.addEventListener('click',function(event){
+            console.log(event.target.id);
+            if(event.target.id === "start"){
+                if (!intervalId){
+                intervalId = setInterval(sayDate,1000,"hi");
+                }
+            }
+            if(event.target.id === "stop"){
+                    clearInterval(intervalId);
+                    console.log("Interval Cleared");
+                    intervalId = null;
+            }
+                
+        })
+    })
+    
+    // document.querySelector("#start").addEventListener('click',function(){
+    //     intervalId()
+    // })
+
+
+</script>
+</html>
