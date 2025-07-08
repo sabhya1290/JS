@@ -1,0 +1,31 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: rgb(47, 45, 45);
+    color: rgb(232, 224, 199);
+}
+.home{
+    background-color: rgb(151, 148, 148);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+#home_button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button{
+    padding: 5px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 16px;
+}
+h1{
+    padding: 10px;
+}
