@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Git users</title>
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+<body class="m-0 p-0 bg-[#FFC7C7]">
+    <header>
+        <div class="bg-[#979494] p-2.5 flex justify-center">
+            <button class="p-2.5 border border-none bg-gray-200 rounded-[5px] pointer text-[16px]" id="home_button" onclick="window.location.href = '../index.html'" >Home</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="head" class=" text-[#8785A2]  m-2.5"><h1 class="text-3xl font-bold underline m-2.5">GitHub User info😬</h1>
+        <p>Enter the userName of your github</p>
+        <div id="searchField">
+            <input type="text" id="userName" placeholder="Enter the userName" class="bg-[#F6F6F6] mt-2.5" autocomplete="sabhya1290">
+            <button id="search" class="bg-[#F6F6F6] w-24 m-2.5" >Search</button>
+        </div>
+        <div id="card" class=" bg-[#FFE2E2] border min-h-[500px] w-[500px]">
+            <ul class="m-2.5">
+                <li><img src="" id="image" height="250px" width="250px" alt="Profile photo" class="rounded-full"></li>
+                <li><h1 id="Name" class="m-2.5 text-2xl"></h1></li>
+                <li><p id="bio" class="m-2.5"></p></li>
+                <li class="flex m-2.5"><p>GitHub Profile Link:- </p><a id="link" href="https://github.com/hiteshchoudhary">  </a></li>
+                <li>
+                    <div class="m-2.5 border w-[200px] p-2.5">
+                        <span class="flex"><p>followers:- </p><p id="followers"></p></span>
+                        <span class="flex"><p>Location:-</p><p id="location"></p></span>
+                        <span class="flex"><p><p>Repo:-</p><p id="Repo"></p></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </main>
+
+
+</body>
+<script src="script.js"></script>
+</html>
